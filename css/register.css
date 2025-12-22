@@ -1,0 +1,14 @@
+/* --- Register Page Additions (添加到 login.css 末尾) --- */
+
+/* 1. 表单行布局 (用于姓名并排) */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    /* 两个输入框之间的间距 */
+}
+
+.form-group.half {
+    width: 50%;
+    /* 每个输入框占一半宽度 */
+}

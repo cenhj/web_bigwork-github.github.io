@@ -1,0 +1,90 @@
+/* --- news.css - 新闻详情页样式 --- */
+
+/* 页面背景保持米白色 */
+body {
+    background-color: #F7F4F1;
+    font-family: "Titillium Web", "Microsoft YaHei", sans-serif;
+}
+
+.article-section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+/* 1. 文章头部区域 */
+.article-header {
+    border-bottom: 1px solid #D0D0D2;
+    /* 标题下方的细分割线 */
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.article-header h1 {
+    font-size: 42px;
+    font-weight: 900;
+    /* 极粗 */
+    line-height: 1.1;
+    color: #15151E;
+    text-transform: uppercase;
+    /* 强制大写 */
+    margin-bottom: 20px;
+    max-width: 900px;
+    /* 标题不占满全宽 */
+}
+
+.article-lead {
+    font-size: 18px;
+    color: #67676D;
+    /* 稍微浅一点的灰色 */
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.news-hr {
+    height: 3px;
+    background-color: #67676D;
+    margin-bottom: 40px;
+}
+
+/* 3. 文章主图 */
+.article-main-image {
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    /* 轻微圆角 */
+    overflow: hidden;
+}
+
+.article-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. 正文内容 (窄版布局) */
+.article-content {
+    /* 关键：正文比图片窄，居中显示，阅读体验更好 */
+    max-width: 800px;
+    margin: 0 auto;
+    /* 居中 */
+    padding: 0 10px;
+}
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    /* 宽松的行高 */
+    color: #15151E;
+    margin-bottom: 25px;
+    /* 段落间距 */
+    font-weight: 300;
+    /* 字体稍微细一点，符合现代阅读风格 */
+}
+
+/* 特殊强调的段落 */
+.article-content strong {
+    font-weight: 700;
+    color: #000;
+}

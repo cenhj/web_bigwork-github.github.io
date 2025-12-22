@@ -1,0 +1,167 @@
+/* --- team.css - 车队详情页专属样式 --- */
+
+/* 1. 车队头部 (Team Hero) */
+.team-hero {
+    /* 法拉利红渐变背景 */
+    background: linear-gradient(180deg, #D40000 0%, #800000 100%);
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-align: center;
+    color: #fff;
+}
+
+/* 赛车图片 */
+.car-display img {
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    /* 增加立体感 */
+    margin-bottom: 20px;
+}
+
+/* 装饰白线 */
+.team-lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.team-lines .line {
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* 车队名称 */
+.team-identity h1 {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+/* 车手名字 */
+.team-drivers-names {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.team-drivers-names .divider {
+    margin: 0 10px;
+    opacity: 0.6;
+}
+
+/* 车队 Logo */
+.team-logo-icon img {
+    height: 60px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+/* 2. 车手板块 (Drivers Section) */
+.team-drivers-section {
+    padding: 40px 0;
+    color: white;
+}
+
+.team-drivers-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* 宽版车手卡片 */
+.team-driver-card {
+    background: linear-gradient(135deg, #a60911 0%, #7a0b0b 100%);
+    width: 48%;
+    /* 两个卡片平分宽度 */
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    /* 左右布局 */
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s;
+    border-top: 2px solid #D40000;
+}
+
+.team-driver-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 卡片左侧信息 */
+.team-driver-card .info {
+    padding: 25px;
+    z-index: 2;
+    width: 50%;
+}
+
+.team-driver-card .fname {
+    display: block;
+    font-size: 16px;
+}
+
+.team-driver-card .lname {
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.team-driver-card .team-name {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.team-driver-card .driver-num {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 15px;
+    line-height: 1;
+}
+
+.team-driver-card .flag {
+    width: 24px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* 卡片右侧照片 */
+.team-driver-card .photo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 60%;
+}
+
+.team-driver-card .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+}
+
+/* 3. 统计板块上方的红色分割线 */
+.stats-separator {
+    margin-bottom: 30px;
+}
+
+.separator-line {
+    width: 100%;
+    height: 8px;
+    background-color: #D40000;
+    /* 法拉利红 */
+    border-radius: 4px;
+    position: relative;
+}

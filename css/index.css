@@ -1,0 +1,842 @@
+.wrapper {
+    margin: 0 auto;
+    width: 1240px;
+}
+
+/* <!-- 快捷导航 --> */
+.shortcut {
+    height: 52px;
+    background-color: #F7F4F1;
+}
+
+.shortcut .wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 52px;
+}
+
+.shortcut .wrapper ul {
+    display: flex;
+    line-height: 52px;
+}
+
+.shortcut li a {
+    padding: 0 15px;
+    font-size: 14px;
+    color: black;
+}
+
+.shortcut li:last-child a {
+    border-right: 0;
+}
+
+.shortcut li .iconfont {
+    margin: 4px;
+    vertical-align: middle;
+}
+
+.shortcut li:nth-child(4) a {
+    border-right: 1px solid #999;
+}
+
+.shortcut li:nth-child(5) a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 10px;
+    width: 65px;
+    height: 26px;
+    background-color: #CE2D1D;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.shortcut li:nth-child(6) a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 65px;
+    height: 26px;
+    background-color: black;
+    border-radius: 25px;
+    color: #fff;
+}
+
+/* 导航栏 */
+
+#headm {
+    width: 100%;
+    margin: 0px auto;
+    height: 70px;
+    background: #15151D;
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+
+}
+
+#headm li {
+    text-align: center;
+    float: left;
+    margin: 20px 20px;
+    display: inline;
+
+}
+
+#headm .dh {
+    position: relative;
+    float: left;
+}
+
+#headm .dh2 ul {
+    width: 140px;
+}
+
+#headm .topa {
+    position: relative;
+    padding: 0 12px;
+    line-height: 29px;
+    display: block;
+    height: 28px;
+    color: #fff;
+    overflow: hidden;
+    float: left;
+    z-index: 100;
+}
+
+#headm li ul {
+    border-bottom: #c9c9c9 1px solid;
+    position: absolute;
+    border-left: #c9c9c9 1px solid;
+    padding-bottom: 10px;
+    width: 120px;
+    display: none;
+    background: #fff;
+    border-top: #c9c9c9 1px solid;
+    top: 28px;
+    border-right: #c9c9c9 1px solid;
+    z-index: 100;
+}
+
+#headm li ul li {
+    width: 100px;
+    float: left;
+    font-weight: 200;
+    line-height: 2px;
+}
+
+#headm li ul li a {
+    display: block;
+    color: #333;
+    float: left;
+}
+
+/* 1. 当鼠标悬停在 li 上时，显示内部的 ul */
+#headm li:hover ul {
+    display: block;
+}
+
+/* 2. 当鼠标悬停在 li 上时，改变主链接 (.topa) 的样式 */
+/* 使其背景变白、文字变红，并加上边框，与下拉菜单融为一体 */
+#headm li:hover .topa {
+    border: #c9c9c9 1px solid;
+    border-radius: 5px;
+    background: #fff;
+    height: 28px;
+    color: #CE2D1D;
+    /* 红色字体 */
+    border-bottom: none;
+    /* 去掉底边框，打通与下拉菜单的连接 */
+    text-decoration: none;
+    /* 修正可能的布局抖动 */
+    box-sizing: border-box;
+    line-height: 27px;
+    /* 微调行高以适应边框 */
+}
+
+/* 导航栏end */
+/* 新闻 */
+.news .wrapper .banner {
+    position: relative;
+    width: 1240px;
+    height: 550px;
+    margin: 50px auto;
+    border-radius: 10px;
+    background-image: url(../images/banner2.jpg);
+    background-size: cover;
+    background-position: center top;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.banner:hover {
+    border-color: #ccc;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.news .wrapper .banner p {
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: #5EB69C;
+    margin-bottom: 20px;
+}
+
+.news .wrapper .banner a {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    font-size: 40px;
+    color: #fff;
+}
+
+/* 新闻卡片 */
+.newsContainer {
+    display: flex;
+    width: 1240px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 600px;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: #ccc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.img {
+    width: 110px;
+    height: 75px;
+    border-radius: 4px;
+    /* 图片圆角 */
+    overflow: hidden;
+    margin-right: 16px;
+    /* 图片与文字的间距 */
+    background-color: #333;
+    /* 图片加载前的占位色 */
+}
+
+.text {
+    font-size: 15px;
+    line-height: 1.3;
+    color: #1f1f1f;
+}
+
+/* 车手 */
+/* --- 车手板块样式 --- */
+
+.drivers-section {
+    margin: 50px auto;
+    width: 100%;
+}
+
+/* 头部样式 */
+.drivers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    /* 微调对齐 */
+}
+
+.drivers-header h2 {
+    font-size: 32px;
+    font-weight: 900;
+    /* 极粗字体 */
+    color: #000;
+    /* text-transform: uppercase; */
+    font-family: "Titillium Web", "Microsoft YaHei", sans-serif;
+    /* 优先使用 F1 风格字体 */
+}
+
+.drivers-header .btn {
+    cursor: pointer;
+    /* 让箭头更好看 */
+    font-size: 18px;
+}
+
+/* 车手列表容器 */
+.drivers-list {
+    display: flex;
+    justify-content: space-between;
+    /* 6张卡片均匀分布 */
+    gap: 15px;
+    /* 卡片间距 */
+}
+
+/* 单个车手卡片 */
+.driver-card {
+    position: relative;
+    /* 计算宽度: (1240 - 5个间隙*15px) / 6张卡片 = 约194px */
+    width: calc((100% - 75px) / 6);
+    height: 280px;
+    /* 设定固定高度 */
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    transition: transform 0.3s;
+    /* 默认背景色，防止图片加载慢时难看 */
+    background-color: #333;
+}
+
+.driver-card:hover {
+    transform: translateY(-5px);
+    /* 悬停上浮 */
+}
+
+
+/* 各个车队的专属底色 */
+.driver-card.mercedes {
+    background-color: #00D2BE;
+}
+
+/* 梅赛德斯青 */
+.driver-card.redbull {
+    background-color: #061D41;
+}
+
+.driver-card.mclaren {
+    background-color: #FF8700;
+}
+
+/* 红牛深蓝 */
+.driver-card.ferrari {
+    background-color: #E80020;
+}
+
+/* 车手图片 */
+.driver-card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* 图片宽度撑满 */
+    height: auto;
+    z-index: 2;
+    /* 在背景之上 */
+    object-fit: cover;
+}
+
+/* 车手名字信息 */
+.driver-info {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    z-index: 3;
+    /* 在图片之上 */
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* 增加文字阴影，防止背景太乱看不清 */
+}
+
+.driver-info .first-name {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.driver-info .last-name {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.driver-hr {
+    width: 1240px;
+    margin: auto;
+    background-color: #bc0303;
+    height: 15px;
+}
+
+/* 2025赛季 */
+/* --- 2025 赛季积分榜模块 --- */
+
+.season-section {
+    margin: 40px auto;
+    width: 100%;
+}
+
+/* 头部样式 */
+.season-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #E0E0E0;
+    /* 底部的灰色长线 */
+    padding-bottom: 10px;
+}
+
+.season-header h2 {
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Titillium Web", sans-serif;
+    margin-bottom: 15px;
+}
+
+/* 选中的标签样式 (DRIVERS) */
+.season-tabs a.active {
+    color: #000;
+    border-bottom: 4px solid #E10600;
+    /* 红色下划线 */
+}
+
+/* 布局网格 */
+.standings-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* 卡片通用样式 */
+.standing-card {
+    position: relative;
+    /* 计算宽度：(1240px - 2个间隙*20px) / 3 = 400px */
+    width: calc((100% - 40px) / 3);
+    height: 240px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
+    padding: 20px;
+    transition: transform 0.2s;
+    background-color: #333;
+    /* 默认底色 */
+}
+
+.standing-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 1. 背景纹理层 */
+.card-bg-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 10px 10px, 10px 10px, 4px 100%;
+    opacity: 0.3;
+    /* 让纹理淡一点 */
+    z-index: 1;
+}
+
+/* 2. 车队颜色 */
+.standing-card.redbull {
+    background: #061D41;
+}
+
+.standing-card.mclaren {
+    background: #D85604;
+}
+
+/* 3. 排名数字 (左上角) */
+.rank {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.rank span {
+    font-size: 10px;
+    vertical-align: top;
+}
+
+/* 4. 车手信息 (左侧) */
+.driver-details {
+    position: relative;
+    z-index: 2;
+    margin-top: 15px;
+}
+
+.driver-details .name {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.driver-details .name strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.driver-details .team {
+    font-size: 12px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.driver-details .flag {
+    margin-top: 8px;
+    font-size: 16px;
+    /* 调整国旗大小 */
+}
+
+/* 5. 积分 (左下角) */
+.points {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.points span {
+    font-size: 12px;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+/* 6. 车手半身像 (右侧) */
+.standing-card img {
+    position: absolute;
+    right: -10px;
+    /* 稍微向右偏移 */
+    bottom: 0;
+    height: 90%;
+    /* 控制图片大小 */
+    width: auto;
+    z-index: 2;
+    object-fit: contain;
+}
+
+/* 底部 */
+.footer {
+    height: 581px;
+    background-color: #F5F5F5;
+}
+
+
+/* 积分榜 */
+/* --- 积分榜列表样式 --- */
+
+.standings-list-box {
+    width: 1240px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 30px auto;
+    /* 与上面的卡片保持间距 */
+    padding: 20px 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* 轻微的阴影 */
+}
+
+/* 每一行 (通用布局) */
+.list-row {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    /* 分隔线 */
+    font-size: 16px;
+    color: #15151E;
+    font-weight: 600;
+}
+
+/* 表头特殊样式 */
+.list-row.list-header {
+    font-size: 12px;
+    color: #949498;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* --- 列宽控制 (Flexbox) --- */
+/* 1. 排名列 */
+.col-pos {
+    width: 8%;
+    font-weight: 700;
+}
+
+/* 2. 车手列 */
+.col-driver {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* 图片和名字间距 */
+}
+
+.col-driver img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* 圆形头像 */
+    object-fit: cover;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+/* 3. 国籍列 */
+.col-nation {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    /* 国籍文字稍微细一点 */
+}
+
+.col-nation .flag {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* 4. 车队列 */
+.col-team {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    color: #67676D;
+    /* 车队名颜色稍微浅一点 */
+    font-size: 14px;
+}
+
+/* 车队颜色小圆点 */
+.team-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.mclaren-bg {
+    background-color: #FF8700;
+}
+
+.redbull-bg {
+    background-color: #061D41;
+}
+
+.mercedes-bg {
+    background-color: #00D2BE;
+}
+
+.ferrari-bg {
+    background-color: #E80020;
+}
+
+/* 5. 积分列 */
+.col-pts {
+    width: 12%;
+    text-align: right;
+    /* 数字靠右对齐 */
+    font-weight: 900;
+    /* 积分加粗 */
+    background-color: #f9f9f9;
+    /* 模仿截图中的淡灰色块效果 (可选) */
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* 这里把积分背景去掉，改成纯数字更像原图 */
+.col-pts {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* 服务 */
+.service {
+    width: 100%;
+    /* 宽度占满全屏 */
+    background-color: #1C1C24;
+    /* 设置背景为纯黑色 */
+    padding: 60px 0;
+    height: 178px;
+    border-bottom: 1px solid #333;
+    /* 边框颜色改深一点，融合背景 */
+}
+
+.service ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service li {
+    display: flex;
+    width: 190px;
+    height: 58px;
+}
+
+/* 帮助 */
+/* --- 底部 Footer 新样式 --- */
+
+.footer {
+    /* 修改背景色为米白色，匹配截图 */
+    background-color: #F7F4F1;
+    /* 去掉固定高度，让内容自动撑开 */
+    height: auto;
+    padding-bottom: 40px;
+}
+
+/* 1. 下载区域 (第一行) */
+.footer-download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.footer-download h2 {
+    font-size: 36px;
+    font-weight: 900;
+    /* 特粗 */
+    text-transform: uppercase;
+    color: #15151E;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+    /* 两个按钮之间的间距 */
+}
+
+.store-buttons a {
+    display: block;
+    height: 40px;
+    /* 控制按钮高度 */
+}
+
+.store-buttons img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* 2. 导航区域 (第二行) */
+.footer-nav {
+    padding-top: 10px;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: space-between;
+    /* 链接两端对齐，中间均匀分布 */
+    align-items: center;
+}
+
+.footer-nav a {
+    font-size: 16px;
+    font-weight: 700;
+    /* 加粗 */
+    color: #000;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: #E10600;
+    /* 悬停变红 */
+}
+
+.copyright {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #F7F4F1;
+}
+
+.copyright p {
+    margin-bottom: 10px;
+    color: #A1A1A1;
+}
+
+.copyright p a {
+    margin: 0 10px;
+    color: #A1A1A1;
+}
+
+/* --- 返回顶部按钮样式 --- */
+#backToTop {
+    display: none;
+    /* 默认隐藏，由 JS 控制显示 */
+    position: fixed;
+    /* 固定定位，不随页面滚动 */
+    bottom: 40px;
+    /* 距离底部 40px */
+    right: 40px;
+    /* 距离右侧 40px */
+    z-index: 999;
+    /* 保证在最上层 */
+
+    border: none;
+    outline: none;
+    background-color: #E10600;
+    /* F1 标志红 */
+    color: white;
+    /* 箭头颜色 */
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* 圆形 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* 阴影增加立体感 */
+    transition: all 0.3s ease;
+    /* 添加过渡动画 */
+
+    /* 让内部 SVG 图标居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 注意：上面的 display: flex 会覆盖 display: none，
+       所以初始状态需要在 JS 里控制，或者在这里先写 display: none !important 
+       但为了简单，依靠 JS 初始加载时的 scroll 判断即可，
+       或者在 CSS 里写 display: none; 然后 JS 改为 display: flex; */
+}
+
+/* 强制初始隐藏，防止 flex 冲突 */
+#backToTop {
+    display: none;
+}
+
+/* 鼠标悬停效果 */
+#backToTop:hover {
+    background-color: #b50500;
+    /* 变深红色 */
+    transform: translateY(-3px);
+    /* 微微上浮 */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --- 滚动渐显动画样式 --- */
+
+/* 1. 初始状态：透明且向下偏移 50px */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+    /* 0.6秒的平滑过渡 */
+}
+
+/* 2. 激活状态：完全显示且位置复原 */
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}

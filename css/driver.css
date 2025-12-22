@@ -1,0 +1,222 @@
+/* --- driver.css - 车手详情页专属样式 --- */
+
+body {
+    background-color: #15151E;
+    /* 页面整体背景变黑 */
+    font-family: "Titillium Web", "Microsoft YaHei", sans-serif;
+}
+
+/* ================= 红色头部区域 (Hero) ================= */
+.driver-hero {
+    /* 法拉利红背景，带渐变 */
+    background: linear-gradient(135deg, #a60911 0%, #D40000 100%);
+    width: 100%;
+    height: 400px;
+    /* 头部高度 */
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    border-top: 1px solid #333;
+    /* 与导航栏的分隔 */
+}
+
+.driver-hero .wrapper {
+    position: relative;
+    height: 100%;
+}
+
+.hero-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+/* 装饰白线 */
+.hero-decoration {
+    position: absolute;
+    left: 100px;
+    height: 60%;
+    width: 0;
+    border-left: 10px solid #fff;
+    /* 模拟截图中的竖线装饰 */
+    top: 20%;
+}
+
+.hero-decoration::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    margin-left: 15px;
+}
+
+/* 名字和信息 */
+.driver-title {
+    margin-left: 200px;
+    /* 避开装饰线 */
+    z-index: 2;
+}
+
+.first-name {
+    display: block;
+    font-size: 32px;
+    font-weight: 300;
+    /* 细体 */
+    font-style: italic;
+    line-height: 1;
+}
+
+.last-name {
+    display: block;
+    font-size: 80px;
+    font-weight: 900;
+    /* 极粗 */
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.driver-meta {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.flag-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.driver-meta .divider {
+    margin: 0 10px;
+    opacity: 0.6;
+}
+
+.driver-meta .number {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* 车手大图 */
+.driver-hero-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    width: 50%;
+    z-index: 1;
+}
+
+.driver-hero-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+}
+
+/* ================= 黑色数据区域 (Stats) ================= */
+.stats-section {
+    padding: 40px 0 80px 0;
+    color: #fff;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "Titillium Web", sans-serif;
+    /* F1 专属字体 */
+    margin-bottom: 40px;
+}
+
+.sub-title {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.stats-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* 左侧：赛季数据 */
+.season-stats {
+    width: 60%;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 两列布局 */
+    column-gap: 40px;
+    row-gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-divider {
+    grid-column: 1 / -1;
+    /* 跨越两列 */
+    height: 1px;
+    background-color: #333;
+    margin: 10px 0;
+}
+
+.stat-item {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.stat-item .label {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.stat-item .value {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.stat-item .value.large {
+    font-size: 32px;
+    /* 6th 和 156 这种大数字 */
+}
+
+/* 右侧：职业生涯卡片 */
+.career-stats-card {
+    width: 40%;
+    background-color: #1F1F27;
+    /* 比背景稍亮一点的深灰色 */
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.career-list {
+    margin-bottom: 30px;
+}
+
+.career-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    font-size: 14px;
+}
+
+.career-item span:first-child {
+    color: #aaa;
+}
+
+.career-item .val {
+    font-weight: 900;
+}
